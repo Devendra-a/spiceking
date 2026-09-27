@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital QR Food Menu | Spice King Family Restaurant & Banquets</title>
+  <meta name="description" content="Official Digital Food Menu of Spice King Family Restaurant, NH-19 Haripur, Chandauli. Browse North Indian dishes, Handi Chicken, Paneer specialties, Tandoori rotis, and order directly on WhatsApp.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .menu-page-header {
+      background: linear-gradient(to bottom, #11131a 0%, var(--bg-primary) 100%);
+      padding: 3.5rem 0 2rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .menu-search-box {
+      max-width: 480px;
+      margin: 1.5rem auto 0;
+      position: relative;
+    }
+    .menu-search-input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      padding: 0.8rem 1.25rem 0.8rem 2.8rem;
+      color: var(--text-main);
+      font-size: 0.9rem;
+    }
+    .menu-search-input:focus {
+      outline: none;
+      border-color: var(--brand-gold-light);
+      box-shadow: 0 0 0 2px rgba(207, 160, 82, 0.15);
+    }
+    .menu-search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--brand-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-search-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+    .category-jump-nav {
+      position: sticky;
+      top: 76px;
+      z-index: 90;
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.65rem 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .jump-links {
+      display: flex;
+      gap: 0.6rem;
+      padding: 0 1rem;
+    }
+    .jump-link {
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-xs);
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .jump-link:hover, .jump-link.active {
+      background: var(--brand-gold);
+      color: #fff;
+      border-color: var(--brand-gold);
+    }
+    .menu-section-heading {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      color: var(--text-heading);
+      margin: 3.5rem 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-gold);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .menu-section-heading span {
+      font-family: var(--font-sans);
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+  </style>
+
+  <!-- Theme Initialization (Runs before render to prevent flash) -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('spice_king_theme');
+      if (saved === 'light' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Information Bar -->
+  <div class="top-notice-bar">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="notice-items">
+        <div class="notice-item">
+          <span class="live-indicator"></span>
+          <span>Kitchen Open: 8:00 AM – 12:15 AM</span>
+        </div>
+        <div class="notice-item">
+          <span class="svg-icon svg-stroke" style="width:13px; height:13px; color:var(--brand-gold);">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span>Grand Trunk Road, NH-19, Haripur Chandauli</span>
+        </div>
+      </div>
+      <div class="notice-items">
+        <a href="tel:06206997192" style="color:var(--brand-gold); font-weight:600; display:flex; align-items:center; gap:5px;">
+          <span class="svg-icon svg-stroke" style="width:13px; height:13px;">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </span>
+          062069 97192
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SPICE KING</span>
+          <span class="brand-sub">Digital Dining Menu</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link active">Digital Menu</a>
+        <a href="index.html#gallery" class="nav-link">Venue Gallery</a>
+        <a href="index.html#banquets" class="nav-link">Banquets & Lawn</a>
+        <a href="index.html#location" class="nav-link">Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Day / Night Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Switch Theme (Day / Night)" aria-label="Toggle Day and Night Theme">
+          <span class="theme-icon sun-icon svg-stroke">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </span>
+          <span class="theme-icon moon-icon svg-stroke">
+            <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+
+        <button class="cart-toggle-btn" id="cartToggleBtn" title="View Order Plate">
+          <span class="svg-icon svg-stroke" style="width:19px; height:19px;">
+            <svg viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          </span>
+          <span class="cart-count-badge" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero & Live Search -->
+  <div class="menu-page-header text-center">
+    <div class="container">
+      <span class="badge-tag">Table QR Selection</span>
+      <h1 class="section-title">Complete Digital Menu</h1>
+      <p class="section-subtitle">
+        Browse categories, select items, and submit directly to our kitchen counter via WhatsApp.
+      </p>
+
+      <div class="menu-search-box">
+        <span class="menu-search-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search dishes (e.g. Handi chicken, kadai paneer, biryani, roti)...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Jump Links -->
+  <div class="category-jump-nav">
+    <div class="container">
+      <div class="jump-links">
+        <a href="#cat-starters" class="jump-link">Starters & Tandoor</a>
+        <a href="#cat-handi" class="jump-link">Handi & Chicken Specials</a>
+        <a href="#cat-paneer" class="jump-link">Paneer & Veg Curries</a>
+        <a href="#cat-dal" class="jump-link">Dal & Lentils</a>
+        <a href="#cat-biryani" class="jump-link">Biryani & Rice</a>
+        <a href="#cat-breads" class="jump-link">Tandoori Breads</a>
+        <a href="#cat-thali" class="jump-link">Highway Thalis</a>
+        <a href="#cat-drinks" class="jump-link">Desserts & Beverages</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Menu Grid List -->
+  <main class="container" style="padding-bottom: 5rem;">
+
+    <!-- 1. Starters -->
+    <section id="cat-starters">
+      <div class="menu-section-heading">
+        <span>Starters & Tandoori Appetizers</span>
+        <span>Vegetarian & Non-Vegetarian</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="starters" data-diet="veg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/paneer_tikka.jpg" alt="Paneer Tikka Tandoori">
+            <span class="bestseller-tag">Chef Choice</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Paneer Tikka Tandoori</h3>
+              </div>
+              <span class="item-price">₹220</span>
+            </div>
+            <p class="item-desc">Marinated malai paneer roasted in clay tandoor with capsicum and onions. Served with mint dip.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">6 pcs</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="starters" data-diet="nonveg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/chilli_chicken.jpg" alt="Crispy Chilli Chicken">
+            <span class="bestseller-tag">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="nonveg-badge"></span>
+                <h3 class="item-title">Crispy Chilli Chicken</h3>
+              </div>
+              <span class="item-price">₹250</span>
+            </div>
+            <p class="item-desc">Crisp boneless chicken bites tossed with fresh green chillies, garlic, capsicum, and soya glaze.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Dry / Semi-Gravy</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="starters" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Crispy Chilli Paneer</h3>
+              </div>
+              <span class="item-price">₹210</span>
+            </div>
+            <p class="item-desc">Cottage cheese cubes tossed in spicy chilli soya reduction with sliced bell peppers.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Appetizer</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="starters" data-diet="nonveg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="nonveg-badge"></span>
+                <h3 class="item-title">Chicken Tikka Kebab</h3>
+              </div>
+              <span class="item-price">₹260</span>
+            </div>
+            <p class="item-desc">Smoky char-grilled chicken breast cubes marinated in spiced hung curd and mustard oil.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">6 pcs</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Handi & Chicken -->
+    <section id="cat-handi">
+      <div class="menu-section-heading">
+        <span>Clay Pot & Chicken Specialties</span>
+        <span>Slow Cooked Curries</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="mains" data-diet="nonveg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/butter_chicken.jpg" alt="Spice King Handi Chicken">
+            <span class="bestseller-tag">House Specialty</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="nonveg-badge"></span>
+                <h3 class="item-title">Spice King Handi Chicken</h3>
+              </div>
+              <span class="item-price">₹340</span>
+            </div>
+            <p class="item-desc">Slow-cooked in an authentic clay pot with whole roasted spices, caramelized onions, and bhuna gravy.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Serves 2-3</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="mains" data-diet="nonveg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="nonveg-badge"></span>
+                <h3 class="item-title">Butter Chicken Royal</h3>
+              </div>
+              <span class="item-price">₹320</span>
+            </div>
+            <p class="item-desc">Clay-oven roasted chicken simmered in rich makhani gravy with butter, cream, and fenugreek leaves.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Rich & Velvety</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="mains" data-diet="nonveg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="nonveg-badge"></span>
+                <h3 class="item-title">Kadai Chicken Masala</h3>
+              </div>
+              <span class="item-price">₹300</span>
+            </div>
+            <p class="item-desc">Chicken cooked in an iron wok with crushed coriander seeds, dried red chillies, and bell peppers.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Spiced Gravy</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Paneer & Veg -->
+    <section id="cat-paneer">
+      <div class="menu-section-heading">
+        <span>Paneer & Vegetarian Curries</span>
+        <span>Traditional North Indian</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="mains" data-diet="veg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/kadai_paneer.jpg" alt="Special Kadai Paneer">
+            <span class="bestseller-tag">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Special Kadai Paneer</h3>
+              </div>
+              <span class="item-price">₹240</span>
+            </div>
+            <p class="item-desc">Malai paneer cubes cooked with bell peppers and onions in freshly ground masala gravy.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Serves 2</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="mains" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Paneer Butter Masala</h3>
+              </div>
+              <span class="item-price">₹240</span>
+            </div>
+            <p class="item-desc">Tender paneer cubes cooked in a mild, creamy tomato butter reduction finished with kasuri methi.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Mild & Rich</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="mains" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Mix Seasonal Vegetable</h3>
+              </div>
+              <span class="item-price">₹180</span>
+            </div>
+            <p class="item-desc">Medley of fresh seasonal vegetables sauteed with cumin, ginger, turmeric, and Indian spices.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Desi Preparation</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Dal & Lentils -->
+    <section id="cat-dal">
+      <div class="menu-section-heading">
+        <span>Dal & Comfort Lentils</span>
+        <span>Desi Ghee Tempered</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="mains" data-diet="veg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/dal_makhani.jpg" alt="Dal Makhani Royal">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Dal Makhani Royal</h3>
+              </div>
+              <span class="item-price">₹190</span>
+            </div>
+            <p class="item-desc">Whole black lentils and kidney beans simmered overnight on low tandoor heat with butter and cream.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Rich & Smoky</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="mains" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Yellow Dal Tadka Special</h3>
+              </div>
+              <span class="item-price">₹150</span>
+            </div>
+            <p class="item-desc">Yellow arhar lentils tempered with garlic, cumin, hing, dried red chillies, and pure desi ghee.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Desi Ghee</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Biryani & Rice -->
+    <section id="cat-biryani">
+      <div class="menu-section-heading">
+        <span>Biryani & Fragrant Rice</span>
+        <span>Dum Cooked Basmati</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="biryani" data-diet="nonveg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/biryani.jpg" alt="Chicken Dum Biryani">
+            <span class="bestseller-tag">Bestseller</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="nonveg-badge"></span>
+                <h3 class="item-title">Royal Chicken Dum Biryani</h3>
+              </div>
+              <span class="item-price">₹260</span>
+            </div>
+            <p class="item-desc">Aged basmati rice cooked on dum with marinated chicken, saffron milk, and caramelized onions. Served with raita.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Includes Raita</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="biryani" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Veg Dum Biryani Special</h3>
+              </div>
+              <span class="item-price">₹200</span>
+            </div>
+            <p class="item-desc">Spiced vegetables and paneer layered with fragrant saffron rice and fried onions.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Includes Raita</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="biryani" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Jeera Basmati Rice</h3>
+              </div>
+              <span class="item-price">₹120</span>
+            </div>
+            <p class="item-desc">Steamed basmati rice tempered with roasted cumin seeds and fresh coriander.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Aromatic</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Breads -->
+    <section id="cat-breads">
+      <div class="menu-section-heading">
+        <span>Tandoori Breads</span>
+        <span>Baked Live in Clay Oven</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="breads" data-diet="veg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/tandoori_roti.jpg" alt="Butter Naan & Roti Basket">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Butter Naan & Roti Basket</h3>
+              </div>
+              <span class="item-price">₹120</span>
+            </div>
+            <p class="item-desc">Assortment of 1 Butter Naan, 1 Garlic Naan, and 2 Butter Tandoori Rotis freshly baked in tandoor.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Assorted Basket</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="breads" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Garlic Butter Naan</h3>
+              </div>
+              <span class="item-price">₹55</span>
+            </div>
+            <p class="item-desc">Leavened bread topped with roasted garlic flakes and brushed with melted butter.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Per piece</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="breads" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Desi Butter Tandoori Roti</h3>
+              </div>
+              <span class="item-price">₹18</span>
+            </div>
+            <p class="item-desc">Whole wheat bread baked crisp in clay oven, brushed with pure butter.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Per piece</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Thalis -->
+    <section id="cat-thali">
+      <div class="menu-section-heading">
+        <span>Highway Special Thalis</span>
+        <span>Balanced Full Meals</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="thali" data-diet="veg">
+          <div class="menu-card-img-wrap">
+            <img src="assets/images/thali.jpg" alt="Deluxe Veg Thali">
+            <span class="bestseller-tag">Traveler Choice</span>
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">King Deluxe Veg Thali</h3>
+              </div>
+              <span class="item-price">₹220</span>
+            </div>
+            <p class="item-desc">Paneer curry, Dal Tadka, seasonal vegetable, Jeera Rice, 4 Butter Rotis, salad, raita, pickle, Gulab Jamun.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Full Meal</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="thali" data-diet="nonveg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="nonveg-badge"></span>
+                <h3 class="item-title">Maharaja Non-Veg Thali</h3>
+              </div>
+              <span class="item-price">₹300</span>
+            </div>
+            <p class="item-desc">Chicken curry, Dal Makhani, Jeera Rice, 4 Butter Tandoori Rotis, salad, raita, pickle, Gulab Jamun.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Full Meal</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Desserts & Beverages -->
+    <section id="cat-drinks">
+      <div class="menu-section-heading">
+        <span>Desserts & Chilled Drinks</span>
+        <span>Refreshments</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="desserts" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Gulab Jamun (2 Pcs)</h3>
+              </div>
+              <span class="item-price">₹60</span>
+            </div>
+            <p class="item-desc">Warm milk solids dumplings soaked in cardamom and rose sugar syrup.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">2 pcs</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="desserts" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Special Sweet Lassi</h3>
+              </div>
+              <span class="item-price">₹70</span>
+            </div>
+            <p class="item-desc">Thick churned creamy yogurt beverage with malai and cardamom.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Chilled</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="desserts" data-diet="veg">
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <div class="item-name-group">
+                <span class="veg-badge"></span>
+                <h3 class="item-title">Cold Drinks & Packaged Water</h3>
+              </div>
+              <span class="item-price">₹40</span>
+            </div>
+            <p class="item-desc">Coca-Cola, Thums Up, Sprite, and packaged mineral water from chilled display.</p>
+            <div class="menu-card-footer">
+              <span class="portion-info">Chilled</span>
+              <button class="add-order-btn">+ Add to Plate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile Floating Action Bar -->
+  <div class="floating-mobile-bar">
+    <div class="mobile-bar-inner">
+      <a href="tel:06206997192" class="mobile-bar-btn call-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>Call</span>
+      </a>
+      <a href="https://wa.me/916206997192?text=Hello%20Spice%20King,%20I%20am%20at%20table%20and%20want%20to%20order." target="_blank" class="mobile-bar-btn wa-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <button class="mobile-bar-btn book-btn" onclick="document.getElementById('cartToggleBtn').click();">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <span>Order Plate</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart / WhatsApp Drawer -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <span>Order Plate</span>
+      </h3>
+      <button class="close-cart-btn" id="closeCartBtn" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-items-body" id="cartItemsList"></div>
+    <div class="cart-footer">
+      <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.4rem;">Select Order Type:</div>
+      <div class="order-type-selector">
+        <button class="order-type-btn active" data-type="Dine-in (Restaurant Table)">Dine-in</button>
+        <button class="order-type-btn" data-type="Highway Takeaway / Packing">Takeaway</button>
+        <button class="order-type-btn" data-type="Pre-order for Arrival">Pre-order</button>
+      </div>
+      <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+        <input type="text" id="orderLocationInfo" class="form-control" style="font-size:0.8rem; padding:0.45rem 0.75rem;" placeholder="Table No. / Vehicle No.">
+        <input type="text" id="orderNotes" class="form-control" style="font-size:0.8rem; padding:0.45rem 0.75rem;" placeholder="Special notes">
+      </div>
+      <div class="cart-total-row">
+        <span>Estimated Total:</span>
+        <span id="cartTotalPrice">₹0</span>
+      </div>
+      <button class="btn btn-whatsapp" id="sendWhatsAppOrderBtn" style="width:100%; padding:0.85rem; font-size:0.95rem;">
+        Send Order to Kitchen Counter
+      </button>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    const searchInput = document.getElementById('menuSearchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        document.querySelectorAll('.menu-card').forEach(card => {
+          const title = card.querySelector('.item-title')?.textContent.toLowerCase() || '';
+          const desc = card.querySelector('.item-desc')?.textContent.toLowerCase() || '';
+          if (title.includes(query) || desc.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>
