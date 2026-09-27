@@ -113,7 +113,8 @@
 
     /* Standee Card Container (Standard 4x6 inch acrylic tent proportion) */
     .standee-card {
-      width: 380px;
+      width: 100%;
+      max-width: 380px;
       background: #ffffff;
       border: 1px solid #d4af37;
       border-radius: 16px;
@@ -121,6 +122,15 @@
       box-shadow: 0 16px 40px rgba(0,0,0,0.12);
       text-align: center;
       position: relative;
+    }
+
+    @media (max-width: 480px) {
+      .controls-grid {
+        grid-template-columns: 1fr;
+      }
+      .controls-panel {
+        padding: 1rem;
+      }
     }
 
     /* Header Banner */
